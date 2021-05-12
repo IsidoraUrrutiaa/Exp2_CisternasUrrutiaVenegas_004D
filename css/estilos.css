@@ -34,7 +34,7 @@ footer{
 h1{
     text-align: center;
     color: aliceblue;
-    margin-top: 3%;
+    margin-top: 4%;
     margin-bottom: 40px;
     font-size: 5vw;
     font-family: tatoo;
@@ -63,4 +63,46 @@ h2{
      text-align: justify;
      padding:2% ;
  }
- 
+ body {
+    font-family: Arial;
+  }
+
+input {
+    float: left;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+label {
+    clear: both;
+    float: left;
+    width: 200px;
+    font-size: 22px;
+    color:white;
+
+}
+
+button {
+    clear: both;
+    float: left;
+    width: 60px;
+}
+
+.error-control {
+    border: 1px solid red;
+}
+
+label.error {
+    color: red;
+    width: 300px;
+    font-size: 0.8em;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+#caja{
+margin: 0 auto;
+align-content: center;
+border-radius: 10px;
+width: 500px;
+}

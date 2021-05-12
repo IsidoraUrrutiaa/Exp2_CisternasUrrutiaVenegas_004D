@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+  <title>Inicio</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
+  <link rel="StyleSheet" href="css/estilos.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+  <script src="js/funciones004.js"></script>
+</head>
+<body background="img/Fondonegro.jpg">
+    <br>
+  <h1>Registro</h1>
+  
+<!-- Menu navegacion -->
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" width="100" height="80" alt="">
+      </a>
+      <div class="collapse navbar-collapse" id="opciones" >
+        <ul class="navbar-nav" style="color: black;">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="QuienesSomos.html">Quienes Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="GaleriaFotos.html">Galeria de Fotos</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="Registro.html">Registro</a>
+          </li>         
+        </ul>
+      </div>
+    </nav>
+    <div class="container" style="width:500px; height: 500px;">
+    <div id="caja">
+    <form id="mi-formulario" action="index.html">
+
+        
+      <label>Correo Electrónico: </label>
+      <input type="text" name="email" required placeholder="nombre@dominio.cl">
+    
+      <label>Telefono: </label>
+      <input type="text" name="fono" minlength="9" required>
+    
+      <label>Nombre: </label>
+      <input type="text" name="nombre" minlength="1" required>
+
+      <label>Contraseña:</label>
+      <input type="password" id="password" name="password" minlength="6">
+    
+      <label>Reingresa contraseña: </label>
+      <input type="password" name="password2" minlength="6">
+    
+      
+        <button>Enviar</button>
+    
+      </form>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+<!-- Pie de pagina -->
+<br>
+<footer class="py-5">
+  <div class="container" id="fondo">
+    <p class="m-0" id="contactos" style="font-size: 13px;">David Cisternas - Jorge Venegas - Isidora Urrutia@Copyright &copy; Your Website 2021 </p>
+   <br>
+    <a href="https://instagram.com/krusty_ink?igshid=154kdd1lbewxx" target="_blank"><img src="img/insta.png" id="insta"></a>
+  </div>
+</footer>
+</html>
