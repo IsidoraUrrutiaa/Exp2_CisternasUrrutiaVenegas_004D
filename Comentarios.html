@@ -1,14 +1,79 @@
 <!doctype html>
 <html>
 <head>
-  <title>Inicio</title> 
+  <title>Comentarios</title> 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
   <link rel="StyleSheet" href="css/estilos.css" type="text/css">
+  <script type="text/Javascript">
+    function validacion()
+    {
+        co= document.getElementById('correo').value;
+        nom= document.getElementById('nombre').value;
+        ed = document.getElementById('edad').value; 
+        fut = document.getElementById('futuro').value;
+        chec1 = document.getElementById('check1').checked;
+        chec2 = document.getElementById('check2').checked;
+        selecc = document.getElementById('selec').selectedIndex;
+
+        if(co == null || co.length==0 || /^\s+$/.test(co))
+        {
+            alert('Error.. debe ingresar correo valido');
+            document.getElementById('correo').value="";
+            document.datos.nom.focus();
+            return false;
+        }
+        if(nom == null || nom.length==0 || /^\s+$/.test(nom))
+        {
+            alert('Error.. debe ingresar un nombre');
+            document.getElementById('nombre').value="";
+            document.datos.nom.focus();
+            return false;
+        }
+        
+        if(isNaN(ed) || ed.length == 0)
+         {
+            alert('Error...debe ingresar una edad válida');
+            document.getElementById('edad').value="";
+            document.datos.ed.focus();
+            return false;
+        }
+        
+        if (fut.length == 0) {
+          alert('su deseo a futuro debe ser minimo de 100 caracteres');
+          document.getElementById('futuro').value="";
+          document.datos.fut.focus();
+          return false;
+        }
+
+        if (chec1 == false && chec2 == false) 
+        {
+          alert('Debe seleccionar una de las dos opciones')
+          return false;
+        }
+        if (selecc == null || selecc == "0")
+        {
+          alert('Seleccione un estilo de tatuaje');
+          document.datos.selec.focus();
+          return false;
+        }
+
+
+        
+    }
+</script>
+
+<style>
+  #caj{
+      margin-left:40px;
+  }
+</style>
 </head>
+  
 <body background="img/Fondonegro.jpg">
-  <h1>Krusty Ink</h1>
+
+  <h1>Comentarios</h1>
 <!-- Menu navegacion -->
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
@@ -27,14 +92,73 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="GaleriaFotos.html">Galeria de Fotos</a>
-          </li>          
+          </li>      
+          <li class="nav-item">
+            <a class="nav-link" href="Registro.html">Registro</a>
+          </li>      
+          <li class="nav-item">
+            <a class="nav-link" href="Comentarios.html">Comentarios</a>
+          </li> 
         </ul>
       </div>
     </nav>
-
+    <div class="container" >
+      <div id = "esti">
+      <form id="formu" action="index.html" method="post" name="datos" onsubmit="return validacion()">
+        <label for="correo">Correo Electrónico </label>
+        <input type="email" name="co" id="correo" required placeholder="nombre@dominio.cl">
+        <label for="nombre">Ingrese nombre</label>
+        <input type="text" name="nom" id="nombre" placeholder="Digite su nombre">
+            <br><br>
+        <label for="edad">Ingrese edad</label>
+        <input type="text" name="ed" id="edad" placeholder="Digite su edad">
+        <br>
+        <div class="form-group">
+          <label for="selec" id="formul" >Estilo </label><br>
+          <select name="sel" id="selec">
+            <option value="">--Estilo--</option>
+            <option value="1">Dot Work</option>
+            <option value="2">Black Work</option>
+            <option value="3">Anime</option>
+            <option value="4">Japones Tradicional</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="fut" style="color: azure;">Que desea a futuro: </label><br>
+          <textarea name="fut" id="futuro" cols="47" rows="4" placeholder="cuentanos que te gustaria ver en el estudio a futuro"></textarea>
+        </div>
+        <br>
+        <label  style="color: azure;">Que te gustaria:</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="check1" value="" style="color: azure;">
+          <label class="form-check-label" for="check1" style="color: azure;">B/N</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="check2" value="" style="color: azure;">
+          <label class="form-check-label" for="check2" style="color: azure;">Color</label>
+        </div>
+        <br><br>
+        <input type="submit" value="Enviar">
+      </form>
+      </div>
+    </div>
+  
+    
+  
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+
+<script>
+  function CambiaColor(a)
+  {
+      a.style.background = "gray";
+  }
+  
+</script>
+
 </body>
 <!-- Pie de pagina -->
 <footer class="py-5">

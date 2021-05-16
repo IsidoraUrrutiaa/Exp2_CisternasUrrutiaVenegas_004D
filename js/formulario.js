@@ -31,7 +31,7 @@
               },
               nombre:{
                   required: 'Ingrese Nombre',
-                  min: 'Fecha no corresponde'
+                  minlength: 'Cantidad de digitos insuficiente'
               },
               password2: {
                   required: 'Reingresa la contraseña',
@@ -43,4 +43,5 @@
           }//messages
       }); //$('#mi-formulario').validate
   }); //function 
+
 
