@@ -132,9 +132,16 @@ width: 500px;
 
     #caj{
         width: 300px;
-        border: 15px solid rgb(161, 211, 161);
+        height: 300px;
+        border: 8px dashed white;
         padding: 20px;
         margin: 20px;
+        color:white;
+        
       }
       
-      
+      #fechas{
+          margin-top: 5%;
+          color:white;
+      }
+

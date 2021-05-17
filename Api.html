@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+  <title>Inicio</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
+  <link rel="StyleSheet" href="css/estilos.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/feriados.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $("#enviar2").click(function(){
+
+                $.get("https://apis.digital.gob.cl/fl/feriados/2021",
+                    function(data){
+                        
+                        $.each(data,function(i,item){
+                            $("#fechas").append("<tr><td>"+item.nombre+"</td><td>"+item.fecha +
+                            "</td><td>"+ item.tipo+ "</td><td>");
+                            
+
+                        });
+
+                    });
+            });
+        })
+    </script>
+</head>
+<body background="img/Fondonegro.jpg">
+  <div class="container">
+    <h1>Feriados </h1>
+    <hr>
+    <div id="caj">
+        <h3>Último feriado de la API</h3>
+            <p id="feriado"></p>
+            <br>
+        <h3>Primer feriado de la API</h3>
+            <p id="feriado2"></p>
+        
+        <br>
+        <button type="button" id="enviar2" style="height: 50px; width:100px ;" >Cargando datos</button>
+    </div>
+    <br><br>
+
+    <table class="table" id="fechas">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+  </div>
+<!-- Menu navegacion -->
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" width="100" height="80" alt="">
+      </a>
+      <div class="collapse navbar-collapse" id="opciones" >
+        <ul class="navbar-nav" style="color: black;">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="QuienesSomos.html">Quienes Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="GaleriaFotos.html">Galeria de Fotos</a>
+          </li>      
+          <li class="nav-item">
+            <a class="nav-link" href="Registro.html">Registro</a>
+          </li>   
+          <li class="nav-item">
+            <a class="nav-link" href="Comentarios.html">Comentarios</a>
+          </li>    
+        </ul>
+      </div>
+    </nav>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+<!-- Pie de pagina -->
+<footer class="py-5">
+  <div class="container" id="fondo">
+    <p class="m-0" id="contactos" style="font-size: 13px;">David Cisternas - Jorge Venegas - Isidora Urrutia@Copyright &copy; Your Website 2021 </p>
+   <br>
+    <a href="https://instagram.com/krusty_ink?igshid=154kdd1lbewxx" target="_blank"><img src="img/insta.png" id="insta"></a>
+  </div>
+</footer>
+</html>
