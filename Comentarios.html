@@ -41,7 +41,7 @@
         }
         
         if (fut.length == 0) {
-          alert('su deseo a futuro debe ser minimo de 100 caracteres');
+          alert('Debe completar el campo Deseo a Futuro');
           document.getElementById('futuro').value="";
           document.datos.fut.focus();
           return false;
@@ -72,7 +72,7 @@
 </head>
   
 <body background="img/Fondonegro.jpg">
-
+<br>
   <h1>Comentarios</h1>
 <!-- Menu navegacion -->
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
@@ -102,9 +102,10 @@
         </ul>
       </div>
     </nav>
+    <br>
     <div class="container" >
-      <div id = "esti">
-      <form id="formu" action="index.html" method="post" name="datos" onsubmit="return validacion()">
+      <div class="row" id = "esti">
+      <form class="col-xl col-sm col-lg col-mg" id="formu" action="index.html" method="post" name="datos" onsubmit="return validacion()">
         <label for="correo">Correo Electrónico </label>
         <input type="email" name="co" id="correo" required placeholder="nombre@dominio.cl">
         <label for="nombre">Ingrese nombre</label>
@@ -113,7 +114,7 @@
         <label for="edad">Ingrese edad</label>
         <input type="text" name="ed" id="edad" placeholder="Digite su edad">
         <br>
-        <div class="form-group">
+        <div class="form-group col-xl col-sm col-lg col-mg">
           <label for="selec" id="formul" >Estilo </label><br>
           <select name="sel" id="selec">
             <option value="">--Estilo--</option>
@@ -124,17 +125,17 @@
           </select>
         </div>
         <br>
-        <div class="form-group">
+        <div class="form-group col-xl col-sm col-lg col-mg">
           <label for="fut" style="color: azure;">Que desea a futuro: </label><br>
-          <textarea name="fut" id="futuro" cols="47" rows="4" placeholder="cuentanos que te gustaria ver en el estudio a futuro"></textarea>
+          <textarea name="fut" id="futuro" cols="47" rows="4" placeholder="Cuentanos que te gustaria ver en el estudio a futuro"></textarea>
         </div>
         <br>
         <label  style="color: azure;">Que te gustaria:</label><br>
-        <div class="form-check form-check-inline">
+        <div class="form-check form-check-inline col-xl col-sm col-lg col-mg">
           <input class="form-check-input" type="checkbox" id="check1" value="" style="color: azure;">
           <label class="form-check-label" for="check1" style="color: azure;">B/N</label>
         </div>
-        <div class="form-check form-check-inline">
+        <div class="form-check form-check-inline ">
           <input class="form-check-input" type="checkbox" id="check2" value="" style="color: azure;">
           <label class="form-check-label" for="check2" style="color: azure;">Color</label>
         </div>

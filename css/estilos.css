@@ -100,12 +100,7 @@ label.error {
     margin-bottom: 10px;
 }
 
-#caja{
-margin: 0 auto;
-align-content: center;
-border-radius: 10px;
-width: 500px;
-}
+
 
 #esti{
     margin: 0 auto;
@@ -133,11 +128,9 @@ width: 500px;
     #caj{
         width: 300px;
         height: 300px;
-        border: 8px dashed white;
         padding: 20px;
         margin: 20px;
         color:white;
-        
       }
       
       #fechas{
@@ -145,3 +138,14 @@ width: 500px;
           color:white;
       }
 
+      #feriados2021{
+          text-align: center;
+          color:white;
+          border:double 5px red;
+          
+          font-family: cursive;
+      }
+
+      #botoncito{
+          margin-left: 33%;
+      }
